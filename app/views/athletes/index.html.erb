@@ -2,13 +2,42 @@
 
 <h1>Athletes</h1>
 
-<div id="athletes">
+<table class="table table-hover">
+  <thead class='thead-dark'>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Age</th>
+      <th>Week 1</th>
+      <th>Week 2</th>
+      <th>Week 3</th>
+      <th>Week 4</th>
+      <th>Week 5</th>
+      <th>Week 6</th>
+      <th>Progression</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @athletes.each do |athlete| %>
-    <%= render athlete %>
+    <tr>
+      <td><%= athlete.first_name %></td>
+      <td><%= athlete.last_name %></td>
+      <td><%= athlete.age %></td>
+      <td><%= athlete.week_1 %></td>
+      <td><%= athlete.week_2 %></td>
+      <td><%= athlete.week_3 %></td>
+      <td><%= athlete.week_4 %></td>
+      <td><%= athlete.week_5 %></td>
+      <td><%= athlete.week_6 %></td>
+      <td><%= athlete.progress %></td>
     <p>
       <%= link_to "Show this athlete", athlete %>
     </p>
+  </tr>
   <% end %>
-</div>
+</tbody>
+</table>
 
 <%= link_to "New athlete", new_athlete_path %>
