@@ -32,6 +32,9 @@
       <td><%= athlete.week_5 %></td>
       <td><%= athlete.week_6 %></td>
       <td><%= athlete.progress %></td>
+      <td><%= link_to 'Show', athlete %></td>
+      <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
+      <td><%= link_to 'Destroy', athlete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <p>
       <%= link_to "Show this athlete", athlete %>
     </p>
