@@ -1,0 +1,2 @@
+class Sportplayer < ApplicationRecord
+end

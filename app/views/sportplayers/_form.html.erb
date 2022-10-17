@@ -1,0 +1,67 @@
+<%= form_with(model: sportplayer) do |form| %>
+  <% if sportplayer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(sportplayer.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+        <% sportplayer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_name, style: "display: block" %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div>
+    <%= form.label :ball_control, style: "display: block" %>
+    <%= form.number_field :ball_control %>
+  </div>
+
+  <div>
+    <%= form.label :short_passing, style: "display: block" %>
+    <%= form.number_field :short_passing %>
+  </div>
+
+  <div>
+    <%= form.label :dribbling, style: "display: block" %>
+    <%= form.number_field :dribbling %>
+  </div>
+
+  <div>
+    <%= form.label :running_with_the_ball, style: "display: block" %>
+    <%= form.number_field :running_with_the_ball %>
+  </div>
+
+  <div>
+    <%= form.label :crossing, style: "display: block" %>
+    <%= form.number_field :crossing %>
+  </div>
+
+  <div>
+    <%= form.label :shooting, style: "display: block" %>
+    <%= form.number_field :shooting %>
+  </div>
+
+  <div>
+    <%= form.label :progress, style: "display: block" %>
+    <%= form.number_field :progress %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

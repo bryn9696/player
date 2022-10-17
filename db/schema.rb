@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_06_140600) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_17_112901) do
   create_table "athletes", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.integer "age"
-    t.integer "week_1"
-    t.integer "week_2"
+    t.integer "ball_control"
+    t.integer "short_passing"
     t.integer "week_3"
     t.integer "week_4"
     t.integer "week_5"
@@ -24,6 +24,36 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_140600) do
     t.string "progress"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sportplayers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "age"
+    t.integer "ball_control"
+    t.integer "short_passing"
+    t.integer "dribbling"
+    t.integer "running_with_the_ball"
+    t.integer "crossing"
+    t.integer "shooting"
+    t.integer "progress"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sportsmen", force: :cascade do |t|
+    t.integer "ball_control"
+    t.integer "short_passing"
+    t.integer "dribbling"
+    t.integer "running_with_the_ball"
+    t.integer "crossing"
+    t.integer "shooting"
+    t.integer "progress"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "age"
   end
 
   create_table "users", force: :cascade do |t|
